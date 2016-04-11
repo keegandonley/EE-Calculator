@@ -76,6 +76,15 @@ def displayResults(unit, answer, initialVals, units, missing):
     print "Power: " + str(initialVals[0]*initialVals[1]) + " Watts"
     print "--------------------"
 
+    # Ask to restart
+    rerun = raw_input("Would you like to start do another? (Y/N) ")
+    while rerun.upper() != "Y" and rerun.upper() != "N":
+        rerun = raw_input("Would you like to do another? (Y/N) ")
+    if rerun.upper() == "Y":
+        calculateOhms()
+    else:
+        exit()
+
 
 
 def errorHandler(e):
