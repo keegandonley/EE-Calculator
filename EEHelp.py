@@ -15,6 +15,8 @@ def main():
         calculateOhms()
     elif choice == 2:
         calculateResist()
+    else:
+        errorHandler("Not a valid selection!")
 
 def calculateOhms():
     print("Welcome to EE Helper")
@@ -159,6 +161,8 @@ def getColorVals(color, bandNum):
             return 8
         elif color.lower() == "white":
             return 9
+        else:
+           errorHandler("Incorrect value entered for the band!")
     elif bandNum == 3:
         if color.lower() == "black":
             return 1
@@ -180,6 +184,8 @@ def getColorVals(color, bandNum):
             return 0.1
         elif color.lower() == "silver":
             return 0.01
+        else:
+           errorHandler("Incorrect value entered for the band!")
     elif bandNum == 4:
         if color.lower() == "brown":
             return 1
@@ -197,6 +203,8 @@ def getColorVals(color, bandNum):
             return 5
         elif color.lower() == "silver":
             return 10
+        else:
+           errorHandler("Incorrect value entered for the band!")
 
 
 
