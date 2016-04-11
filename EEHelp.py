@@ -81,6 +81,13 @@ def displayResults(unit, answer, initialVals, units, missing):
 def errorHandler(e):
     print("Oops! The follwing error occured:")
     print(e)
+    rerun = raw_input("Would you like to start over? (Y/N) ")
+    while rerun.upper() != "Y" and rerun.upper() != "N":
+        rerun = raw_input("Would you like to start over? (Y/N) ")
+    if rerun.upper() == "Y":
+        main()
+    else:
+        exit()
 
 
 main()
