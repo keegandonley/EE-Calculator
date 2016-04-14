@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>EEHelp</title>
+    <title>EE Calc | Home</title>
 
     <!-- Scripts -->
     <script src='assets/js/site.js'></script>
@@ -14,6 +14,90 @@
     <link rel='stylesheet' href='assets/css/site.css'>
 </head>
 <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">EE Calc</a>
+    </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="equations.html">Equations</a></li>
+        <li><a href="components.html">Components</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Information <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="equations-info.html">Equations</a></li>
+            <li><a href="components-info.html">Components</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Donate</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="jumbotron">
+  <div class="container">
+      <h1 class="welcome">Electrical Engineering Calculator</h1>
+    <p>Welcome to a great tool for electrical engineers and students! You can get
+    information on everything from equations to components here!</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Calculations</h3>
+        </div>
+        <div class="panel-body">
+          The equations feature will allow you to quickly solve equations,
+          such as Ohm's Law.
+        </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Component Values</h3>
+        </div>
+        <div class="panel-body">
+          The components feature will allow you to quickly and easily determine values of resistors
+          based on their color codes, and ceramic capacitors based on their numbering system.
+        </div>
+      </div>
+  </div>
+  <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Information</h3>
+        </div>
+        <div class="panel-body">
+          The information section has lots of knowledge about electrical engineering concepts, including
+          project ideas and how to use components!
+        </div>
+      </div>
+  </div>
+</div>
 </body>
 </html>

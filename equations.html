@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>EE Calc | Equations</title>
+
+    <!-- Scripts -->
+    <script src='assets/js/site.js'></script>
+    <script src='assets/js/packages/jquery/jquery-1.12.0.js'></script>
+    <script src='assets/js/packages/bootstrap/bootstrap.min.js'></script>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='assets/css/bootstrap/bootstrap.min.css'>
+    <link rel='stylesheet' href='assets/css/site.css'>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">EE Calc</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="equations.html">Equations <span class="sr-only">(current)</span></a></li>
+        <li><a href="components.html">Components</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Information <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="equations-info.html">Equations</a></li>
+            <li><a href="components-info.html">Components</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Donate</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="page-header">
+  <h1>Equation Calculator</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default equationbox">
+            <div class="panel-heading">
+                <h3 class="panel-title">Ohm's Law</h3>
+            </div>
+            <div class="panel-body">
+                <p> 2 of the 4 fields must be filled out <p>
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="...">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Volts (V) <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#">Millivolts (mV)</a></li>
+                        </ul>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="...">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Amps (A) <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#">Milliamps (mA)</a></li>
+                        </ul>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="...">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ohms (Ω)<span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#">milli-ohm (mΩ)</a></li>
+                            <li><a href="#">kilo-ohm (kΩ)</a></li>
+                            <li><a href="#">mega-ohm (MΩ)</a></li>
+                        </ul>
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="...">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" aria-haspopup="false" aria-expanded="false">Watts (W)</button>
+                        <!-- <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#">milli-ohm (mΩ)</a></li>
+                            <li><a href="#">kilo-ohm (kΩ)</a></li>
+                            <li><a href="#">mega-ohm (MΩ)</a></li>
+                        </ul> -->
+                    </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
