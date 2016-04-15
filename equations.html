@@ -8,6 +8,7 @@
     <script src='assets/js/site.js'></script>
     <script src='assets/js/packages/jquery/jquery-1.12.0.js'></script>
     <script src='assets/js/packages/bootstrap/bootstrap.min.js'></script>
+    <script src='assets/js/equations.js'></script>
 
     <!-- CSS -->
     <link rel='stylesheet' href='assets/css/bootstrap/bootstrap.min.css'>
@@ -66,33 +67,36 @@
                 <h3 class="panel-title">Ohm's Law <small>( V = I x R)</small></h3>
             </div>
             <div class="panel-body">
-                <p> 2 of the 4 fields must be filled out <p>
+                <p> 2 of the 3 fields must be filled out <p>
                 <div class="input-group">
-                    <input type="text" class="form-control" aria-label="...">
+                    <input type="text" class="form-control" aria-label="..." id="voltage-input">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Volts (V) <span class="caret"></span></button>
-                        <ul class="dropdown-menu dropdown-menu-right">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Voltage <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-volts">
+                            <li><a href="#">Volts (V)</a></li>
                             <li><a href="#">Millivolts (mV)</a></li>
                         </ul>
                     </div><!-- /btn-group -->
                 </div><!-- /input-group -->
 
                 <div class="input-group">
-                    <input type="text" class="form-control" aria-label="...">
+                    <input type="text" class="form-control" aria-label="..." id="current-input">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Amps (A) <span class="caret"></span></button>
-                        <ul class="dropdown-menu dropdown-menu-right">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Current <span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-current">
+                            <li><a href="#">Amps (A)</a></li>
                             <li><a href="#">Milliamps (mA)</a></li>
                         </ul>
                     </div><!-- /btn-group -->
                 </div><!-- /input-group -->
 
                 <div class="input-group">
-                    <input type="text" class="form-control" aria-label="...">
+                    <input type="text" class="form-control" aria-label="..." id="resistance-input">
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ohms (Ω)<span class="caret"></span></button>
-                        <ul class="dropdown-menu dropdown-menu-right">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resistance<span class="caret"></span></button>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-resistance">
                             <li><a href="#">milli-ohm (mΩ)</a></li>
+                            <li><a href="#">Ohms (Ω)</a></li>
                             <li><a href="#">kilo-ohm (kΩ)</a></li>
                             <li><a href="#">mega-ohm (MΩ)</a></li>
                         </ul>
@@ -100,9 +104,9 @@
                 </div><!-- /input-group -->
 
                 <div class="input-group">
-                    <input type="text" class="form-control" aria-label="...">
+                    <input type="text" class="form-control" aria-label="..." id="power-input" disabled>
                     <div class="input-group-btn">
-                        <button type="button" class="btn btn-default" aria-haspopup="false" aria-expanded="false">Watts (W)</button>
+                        <button type="button" class="btn btn-default" aria-haspopup="false" aria-expanded="false" disabled>Watts (W)</button>
                         <!-- <ul class="dropdown-menu dropdown-menu-right">
                             <li><a href="#">milli-ohm (mΩ)</a></li>
                             <li><a href="#">kilo-ohm (kΩ)</a></li>
