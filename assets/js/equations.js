@@ -6,8 +6,6 @@ var ohmsLaw = {
         power: 0,
     },
     getMultiplierString: function getMultiplier(variable, unit) {
-        console.log(variable);
-        console.log(unit);
         switch(variable) {
             case "Voltage":
                 ohmsLaw.values.voltageMult = ohmsLaw.getMultiplierVal(unit)
@@ -87,7 +85,47 @@ var ohmsLaw = {
     }
 };
 
+var voltageDrop = {
+    values: {
+        voltageMult: 0,
+        currentMult: 0,
+        resistanceMult: 0,
+        power: 0,
+    },
+    getMultiplierString: function getMultiplier(variable, unit) {
+        switch(variable) {
+            case "Voltage":
+                voltageDrop.values.voltageMult = ohmsLaw.getMultiplierVal(unit)
+                break;
+            case "Resistance":
+                voltageDrop.values.resistanceMult = ohmsLaw.getMultiplierVal(unit)
+                break;
+        }
+        var toCalculate = voltageDrop.calculateVals();
+        if (toCalculate) {
+            console.log("Calculate!");
+        }
+
+
+    },
+    calculateVals: function calculateVals() {
+        var numCompleted = 0;
+        var keys = Object.keys(voltageDrop.values);
+        for (var i = 0; i < keys.length; i++ ) {
+            if (voltageDrop.values[keys[i]] !== 0) {
+                numCompleted++
+            }
+        }
+        if (numCompleted >= 2) {
+            return True
+        }
+        return False
+
+    },
+}
+
 $(document).ready(function(){
+    // Ohm's law fields
     $('.dropdown-menu-volts li a').on('click', function(){
         ohmsLaw.getMultiplierString("Voltage", $(this).text());
     });
@@ -97,6 +135,15 @@ $(document).ready(function(){
     });
 
     $('.dropdown-menu-resistance li a').on('click', function(){
+        ohmsLaw.getMultiplierString("Resistance", $(this).text());
+    });
+
+    // Voltage drop fields
+    $('.dropdown-menu-resistor-volts li a').on('click', function(){
+        ohmsLaw.getMultiplierString("Voltage", $(this).text());
+    });
+
+    $('.dropdown-menu-resistor-resistance li a').on('click', function(){
         ohmsLaw.getMultiplierString("Resistance", $(this).text());
     });
 
